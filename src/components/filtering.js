@@ -31,7 +31,13 @@ export function initFiltering(elements, indexes) {
       input.value = "";
       state[field] = "";
     }
+    const filterState = {
+      ...state,
+      total: [state.totalFrom, state.totalTo],
+    };
 
+    delete filterState.totalFrom;
+    delete filterState.totalTo;
     // @todo: #4.5 — отфильтровать данные используя компаратор
     return data.filter((row) => compare(row, state));
   };
