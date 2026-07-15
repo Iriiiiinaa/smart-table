@@ -41,6 +41,9 @@ async function render(action) {
   const { total, items } = await api.getRecords(query);
 
   updatePagination(total, query);
+  console.log("query:", query);
+  console.log("total:", total);
+  console.log("items:", items);
   sampleTable.render(items);
 }
 
