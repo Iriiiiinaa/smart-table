@@ -83,4 +83,8 @@ async function init() {
     searchBySeller: indexes.sellers,
   });
 }
-init().then(render);
+init()
+  .then(() => render())
+  .catch((error) => {
+    console.error("Ошибка запуска приложения:", error);
+  });
