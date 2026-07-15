@@ -54,7 +54,6 @@ const sampleTable = initTable(
   render,
 );
 
-// @todo: инициализация
 const { applyPagination, updatePagination } = initPagination(
   sampleTable.pagination.elements,
   (el, page, isCurrent) => {
